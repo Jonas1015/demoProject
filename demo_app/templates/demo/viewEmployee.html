@@ -1,0 +1,30 @@
+{% extends 'demo/base.html' %}
+{% block content%}
+<div class="outer_container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="contents">
+                      <h2>EMPLOYEE DATA</h2>
+                      <a href="{% url 'view_employee' %}">View All Employee</a>
+                        <div class=" w3-card ">
+                          <div class="details">
+                            <label for="#h1">Employee Name:</label><h1 id="h1">{{myData.full_name}}</h1>
+                            <hr>
+                            <label for="#h3">Working on:</label><h3 id="h3">{{myData.project_name}}</h3>
+                            <hr>
+                            <label for="#h4">Appointment Date:</label><h3 id="h4">{{myData.appointment_date | date:'b d Y'}}</h3>
+                            <hr>
+                            <label for="#h5">Salary:</label><h3 id="h5">{{myData.salary}}</h3>
+                            <hr>
+                            <label for="#h6">Start of the Contract:</label><h3 id="h6">{{myData.date_of_contract| date:'b d Y'}}</h3>
+                            <hr>
+                            <label for="#h7">End of the Contract:</label><h3 id="h7">{{myData.end_of_contract | date:'b d Y'}}</h3>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock%}

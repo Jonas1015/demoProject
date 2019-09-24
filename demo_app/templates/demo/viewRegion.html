@@ -1,0 +1,23 @@
+{% extends 'demo/base.html' %}
+{% block content%}
+<div class="outer_container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 offset-md-2">
+                    <div class="contents">
+                      <h2>REGIONAL DATA</h2>
+                        <div class=" w3-card ">
+                          <div class="details">
+                            <label for="#h1">Population Number:</label><h1 id="h1">{{myData.region}}</h1>
+                            <hr>
+                            <label for="#h3">Population Number:</label><h3 id="h3">{{myData.population}}</h3>
+                            <hr>
+                            <label for="#h4">District Number:</label><h3 id="h4">{{myData.number_of_district}}</h3>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock%}

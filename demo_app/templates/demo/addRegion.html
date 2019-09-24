@@ -1,0 +1,23 @@
+{% extends 'demo/base.html' %}
+{% load crispy_forms_tags %}
+{% block content%}
+  <div class="outer_container">
+    <div class="row">
+      <div class="message">
+        {% if messages %}
+                <div class="alert alert-{{ messages.tags }} alert-dismissible fade show" role="alert">
+                  {{ message }}
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+        {%  endif %}
+      </div>
+      <form action="" method="post">
+        {% csrf_token %}
+        {{form| crispy}}
+        <button class="btn btn-primary btn-block" type="submit" name="button">Save</button>
+      </form>
+  </div>
+</div>
+{% endblock%}

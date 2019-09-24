@@ -1,0 +1,157 @@
+/* <!-- <style>
+  .imageback {
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url ('image's url');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+</style> --> */
+/*============================== BACKGROUND KALI SANA ==============================*/
+.navbar {
+  background-color: #367588;
+}
+.navbar a:hover{
+    color: #f1f1f1;
+
+}
+
+body {
+  /* font-family: "Lato", sans-serif; */
+  font-family: "Montserrat", sans-serif;
+  transition: background-color .5s;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  background-color: #367588;
+  transition: 0.5s;
+  padding-top: 60px;
+  color: #fff;
+}
+
+.sidenav a {
+  padding-top: 100px;
+  padding-left: 40px;
+  text-decoration: none;
+  font-size: 15px;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+  border: thin;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.nav-item a:hover {
+  color: #f1f1f1;
+}
+
+/*=======================     outer_container =======================*/
+
+
+/*============================= w3-Teal  =============================*/
+.w3-teal {
+  background: #367588;
+}
+
+.outer_container .row  form {
+    position: relative;
+    top: 150px;
+    left: 350px;
+    width: 500px !important;
+}
+.outer_container .row  form button {
+  background: #367588;
+  border-radius: 0px;
+  border: 0px;
+  margin-top: 20px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.outer_container .container form {
+  margin-left: 175px !important;
+  margin-top: 100px !important;
+}
+
+.outer_container .container form input {
+    width: 640px;
+}
+
+
+.btnColor {
+  background: #367588;
+  border: 0px;
+}
+.outer_container .row canvas {
+  position: relative;
+  top: 70px;
+}
+
+.outer_container .container .row .contents {
+  margin-left: 0px !important;
+  margin-top: 40px !important;
+  text-align: center;
+
+}
+
+.outer_container .container .row .contents h2 {
+  margin-left: -40px;
+}
+
+
+.outer_container .container .row .contents .w3-card {
+  margin-left: 0px !important;
+  margin-top: 50px !important;
+  width: 700px;
+  padding-left: 130px;
+  padding-right:140px;
+  border-radius: 20px;
+}
+
+.outer_container .container .row .contents .w3-card h3{
+  margin-left: 1px !important;
+}
+
+
+
+
+
+/*=============================== ID's ===============================*/
+#multiCollapse1{
+    background-color: orange;
+    border-radius: 50px;
+}
+
+#multiCollapse2{
+    background-color: red;
+    border-radius: 50px;
+}
+
+#multiCollapse3{
+  background-color: yellow;
+  border-radius: 50px;
+}

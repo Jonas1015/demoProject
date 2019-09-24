@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load staticfiles %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demographics</title>
+      <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+      <link rel="stylesheet" href="{% static 'css/w3.css' %}">
+      <link rel="stylesheet" href="{% static 'css/style.css' %}">
+      <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <!-- <link rel="stylesheet" href="{% static 'materialize/css/materialize.min.css' %}"> -->
+</head>
+<body>
+      <div class="w3-sidebar w3-bar-block w3-card w3-animate-left sidenav" style="display:none" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large "
+        onclick="w3_close()">Close &times;</button>
+        <a href="{% url 'dashboard_view' %}" class="w3-bar-item w3-button">Dashboard</a>
+        <a href="{% url 'add_region' %}" class="w3-bar-item w3-button">Add Region</a>
+        <a href="{% url 'home_view' %}" class="w3-bar-item w3-button">View Regions</a>
+        <a href="#" class="w3-bar-item w3-button">Settings</a>
+        <a href="#" class="w3-bar-item w3-button">Logout</a>
+      </div>
+
+      <div id="main">
+        <div class="w3-teal">
+          <div class="w3-container">
+            <nav class="navbar navbar-expand-lg fixed-top">
+              <button id="openNav" class="w3-button w3-xlarge" onclick="w3_open()">&#9776;</button>
+              <a class="navbar-brand ml-4" href="{% url 'dashboard_view' %}">SCoL</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'dashboard_view' %}">Dashboard</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'add_region' %}">Add Region</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home_view' %}">View Regions</a>
+                  </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <a class="nav-link" href="#">Settings</a>
+                    <a class="nav-link" href="#">Logout</a>
+                </form>
+              </div>
+            </nav>
+          </div>
+        </div>
+        <div class="w3-container">
+            {% block content %}{% endblock %}
+        </div>
+      </div>
+
+
+
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- <script src="{% static 'materialize/js/materialize.min.js' %}"></script> -->
+    <script>
+      function w3_open() {
+      document.getElementById("main").style.marginLeft = "13%";
+      document.getElementById("mySidebar").style.width = "13%";
+      document.getElementById("mySidebar").style.display = "block";
+      document.getElementById("openNav").style.display = 'none';
+      }
+      function w3_close() {
+      document.getElementById("main").style.marginLeft = "0%";
+      document.getElementById("mySidebar").style.display = "none";
+      document.getElementById("openNav").style.display = "inline-block";
+      }
+    </script>
+
+</body>
+</html>
